@@ -31,3 +31,40 @@ torch.onnx.export(net, input, file_name, verbose=True,opset_version=11, keep_ini
 ```
 python CameraShow.py -n mobilenetv2 -m /home/md/cc/dms-train-tools/test_model/dms/model_86_20200524131058.pth --mean-std 1 --gpu 0
 ```
+
+
+
+|  parts_name  | error_other | error | 0.1<threshold<0.5 | 0.5 <threshold<0.7 | threshold>0.7 |
+| :-----| :----: | :----: |:----: |:----: |:----: |
+|    1-log     |      18     |   0   |         0         |         13        |      764      |
+|  2-dangwei   |     149     |   0   |         0         |         79        |      2256     |
+| 3-houshijing |     194     |   12  |         10        |        222        |      5851     |
+| 4-yibiaopan  |      10     |   1   |         0         |         3         |      1038     |
+|    5-ping    |     341     |   0   |         1         |        108        |      3884     |
+|   6-dadeng   |     535     |   0   |         0         |        257        |      2122     |
+|   7-yushua   |      30     |   11  |         1         |         23        |      892      |
+|    8-key     |     697     |  118  |         44        |        584        |      7975     |
+
+
+|  parts_name  | error_other | error | 0.1<threshold<=0.5 | 0.5<threshold<=0.7 | 0.7<threshold<0.9 | threshold>=0.9 |
+| :-----| :----: | :----: |:----: |:----: |:----: |:----: |
+|    1-log     |      1      |   0   |         0          |         2          |         5         |      149       |
+|  2-dangwei   |      8      |   0   |         0          |         0          |         1         |       42       |
+| 3-houshijing |      38     |   0   |         0          |         28         |         70        |      2487      |
+| 4-yibiaopan  |      4      |   0   |         0          |         4          |         7         |       38       |
+|    5-ping    |      8      |   0   |         0          |         9          |         11        |      1459      |
+|   6-dadeng   |     110     |   0   |         0          |         37         |        139        |      4415      |
+|   7-yushua   |      77     |   51  |         4          |         47         |         79        |      1212      |
+|    8-key     |      65     |   7   |         5          |         59         |        262        |      6355     |
+
+
+|  parts_name  | error_other | error | 0.1<threshold<=0.5 | 0.5<threshold<=0.7 | 0.7<threshold<0.9 | threshold>=0.9 |
+| :-----| :----: | :----: |:----: |:----: |:----: |:----: |
+|    1-log     |      1      |   0   |         0          |         1          |         13        |      142       |
+|  2-dangwei   |      7      |   0   |         0          |         1          |         2         |       41       |
+| 3-houshijing |      38     |   0   |         0          |         21         |         66        |      2498      |
+| 4-yibiaopan  |      8      |   0   |         0          |         2          |         9         |       34       |
+|    5-ping    |      18     |   0   |         0          |         11         |         20        |      1438      |
+|   6-dadeng   |      74     |   0   |         0          |         37         |        126        |      4464      |
+|   7-yushua   |      50     |   71  |         4          |         37         |         71        |      1237      |
+|    8-key     |      42     |   3   |         3          |         45         |        172        |      6488      |
