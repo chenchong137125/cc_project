@@ -23,11 +23,11 @@
 + 2.3DCNN的局限性：尽管可以学习到时空信息，但是运算量巨大，使得应用困难
 + 3.在时间维度上，移动了帧与帧之间的一些channel，因此使得帧间的信息得到了交换
 + 4.[该方法检测流程如下](https://blog.csdn.net/Amazingren/article/details/100715768#:~:text=TSM%3A%20Temporal%20Shift%20Module%20for%20Efficient,Video%20Understanding%20%28ICCV2019%29%20%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E7%90%86%E8%A7%A3%E7%9A%84%E6%96%87%E7%AB%A0%EF%BC%8C%E4%B8%BB%E8%A6%81%E4%BB%8B%E7%BB%8D%E4%BA%86%E4%B8%80%E7%A7%8D%E5%8F%AF%E4%BB%A5%E8%BE%BE%E5%88%B03DCNN%E7%9A%84%E6%95%88%E6%9E%9C%E7%9A%84%EF%BC%8C%E4%BD%86%E6%98%AF%E4%BF%9D%E6%8C%812DCNN%E8%AE%A1%E7%AE%97%E9%87%8F%E5%92%8C%E5%8F%82%E6%95%B0%E9%87%8F%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E5%8F%AB%E5%81%9ATSM%EF%BC%88Tempora%20Shift%20Module%EF%BC%89%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%9C%A8%E4%B8%80%E7%B0%87%E8%A6%81%E5%A4%84%E7%90%86%E7%9A%84%E5%B8%A7%E4%B9%8B%E9%97%B4%EF%BC%8C%E6%8A%8A%E7%9B%B8%E9%82%BB%E5%B8%A7%E4%B9%8B%E9%97%B4%E7%9A%84channel%E8%BF%9B%E8%A1%8C%E4%BA%86%E4%BA%A4%E6%9B%BF%E6%8B%BC%E6%8E%A5%EF%BC%81):
-![TSM](picture/TSM.PNG)
+![TSM](picture/TSM.png)
 + 5.Online的单向TSM模型
 方式：把之前的frames shifts到当前的frames上，从而也达到了时序信息建模的作用，从而实现在线的recognition功能！
 推理图如下：在推理的过程中，对于每一帧（比如Ft），只保存其首先的1/8的feature map。并且保存在cache中，对于下一帧(比如F t+1 ), 那么就是用Ft上的保存的1/8和当前帧Ft+1上的7/8组合起来。从而生成下一层feature map。如此循环下去！ 该模型使用 MobileNetV2 作为主干，并插入了在线 TSM。它是用TVM编译的。它可以在 Nano 上以超过 70 FPS 的速度运行（对于演示，速度被相机延迟）。
-![TSM1](picture/TSM1.PNG)
+![TSM1](picture/TSM1.png)
 
 ![EgoGesture](picture/egoGesture.PNG)
 
