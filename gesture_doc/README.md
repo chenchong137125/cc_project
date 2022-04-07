@@ -34,8 +34,8 @@
 ## 3.[Mendeley data](https://data.mendeley.com/datasets/ndrczc35bt/1),数据可以下载，解压出错。该数据集根据介绍是有手的框还有手的类别。可以识别手势如下：
 ![Mendeley](picture/Mendeley.PNG)
 
-## 3.[商汤科技手势识别](http://openar.sensetime.com/docs)现在主要目前可识别14中常用的手势，包括剪刀，石头，布，OK，点赞，666，手枪，比心，我爱你，三根手指，四根手指，小拇指，指尖，金属礼。
+## 4.[商汤科技手势识别](http://openar.sensetime.com/docs)现在主要目前可识别14中常用的手势，包括剪刀，石头，布，OK，点赞，666，手枪，比心，我爱你，三根手指，四根手指，小拇指，指尖，金属礼。
 ![shangtang](picture/shangtang.PNG)
-## 4.[百度手势识别](https://ai.baidu.com/tech/body/gesture)目前识别24种常见手势，支持单手手势和双手手势，包括拳头、OK、比心、作揖、作别、祈祷、我爱你、点赞、Diss、Rock、竖中指、数字等。
+## 5.[百度手势识别](https://ai.baidu.com/tech/body/gesture)目前识别24种常见手势，支持单手手势和双手手势，包括拳头、OK、比心、作揖、作别、祈祷、我爱你、点赞、Diss、Rock、竖中指、数字等。
 
 
